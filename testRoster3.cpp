@@ -25,7 +25,7 @@ int main() {
   ASSERT_EQUALS(1111111,r.getStudentAt(4).getPerm());  
   ASSERT_EQUALS(3,r.indexOfMaxPermAmongFirstKStudents(5));
 
-  r.sortByPermHelper(5); // should put max perm of 0..4 in position 4
+ // r.sortByPermHelper(5); // should put max perm of 0..4 in position 4
 
   // They should have swapped places
 
@@ -35,7 +35,7 @@ int main() {
   ASSERT_EQUALS(5555555,r.getStudentAt(1).getPerm());
   ASSERT_EQUALS(1111111,r.getStudentAt(3).getPerm());
 
-  r.sortByPermHelper(4); // should put max perm from 0..3 in position 3
+ ////////////////// r.sortByPermHelper(4); // should put max perm from 0..3 in position 3
 
   ASSERT_EQUALS(3,r.indexOfMaxPermAmongFirstKStudents(4));
   ASSERT_EQUALS(1111111,r.getStudentAt(1).getPerm());

@@ -45,14 +45,9 @@ std::string Student::getFullName() const {
 }
 
 
-std::string Student::toString() const { 
-  // e.g. [12345,Smith,Malory Logan]
+std::string Student::toString() const {
   std::ostringstream oss;
-  
-  oss << "[" 
-      << this->getPerm() << ","
-      << this->getLastName() << ","
-      << this->getFirstAndMiddleNames() << "]";
+  oss <<"[" << this->getPerm() << "," << this->getLastName() <<","<< this->getFirstAndMiddleNames() << "]";
   return oss.str();
 } 
 
