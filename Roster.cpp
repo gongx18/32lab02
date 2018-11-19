@@ -81,9 +81,11 @@ Student Roster::getStudentAt(int index) const {
 
 std::string Roster::toString() const {
   std::string result = "{\n";
-  
-  result += "STUB!!!!";   // @@@ RESTORE THIS 
-
+  for(int i = 0; i < numStudents - 1; i++){
+      result += "[" + std::to_string(students[i]->getPerm()) + "," + students[i]->getFullName() + "]," +"\n"; 
+  }  
+  // @@@ RESTORE THIS 
+  result += "[" + std::to_string(students[numStudents - 1]->getPerm()) + "," + students[numStudents - 1]->getFullName() + "]" +"\n"; 
   result += "}\n";
   return result;
 
@@ -110,7 +112,7 @@ void Roster::sortByPerm() {
 int Roster::indexOfMaxPermAmongFirstKStudents(int k) const {
   int max_idx;
   int max = students[0]->getPerm();
-  if(k == 1) return 0; 
+  if(k == 1) return max; 
   for(int i = 0; i < k; i ++){
       if(students[i]->getPerm() > max){
           max_idx = i;

@@ -41,7 +41,7 @@ std::string Student::getFirstAndMiddleNames() const {
 }
 
 std::string Student::getFullName() const { 
-  return firstAndMiddleNames + " " + lastName; 
+  return lastName + "," +  firstAndMiddleNames; 
 }
 
 
